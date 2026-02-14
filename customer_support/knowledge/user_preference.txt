@@ -1,4 +1,4 @@
-User name is John Doe.
-User is an AI Engineer.
+User name is Girish Nandgawe.
+User is an AI Engineer / Software Developer.
 User is interested in AI Agents.
-User is based in San Francisco, California.
+User is based in San Mumbai, India.
