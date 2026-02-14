@@ -18,8 +18,7 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': 'AI LLMs',
-        'current_year': str(datetime.now().year)
+        'customer_message': 'My order 48392 has not updated in 5 days. I want a refund.',
     }
 
     try:

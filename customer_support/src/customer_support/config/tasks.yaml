@@ -1,17 +1,67 @@
-research_task:
+triage_task:
   description: >
-    Conduct a thorough research about {topic}
-    Make sure you find any interesting and relevant information given
-    the current year is {current_year}.
-  expected_output: >
-    A list with 10 bullet points of the most relevant information about {topic}
-  agent: researcher
+      Analyze the following customer message:
 
-reporting_task:
-  description: >
-    Review the context you got and expand each topic into a full section for a report.
-    Make sure the report is detailed and contains any and all relevant information.
+        "{customer_message}"
+
+        Classify the issue into one of the following categories:
+        - Order Issue
+        - Refund Issue
+        - General Question
+        - Escalation Needed
+
+        Also extract:
+        - Order ID (if present)
+        - Customer sentiment (Neutral / Frustrated / Angry)
   expected_output: >
-    A fully fledged report with the main topics, each with a full section of information.
-    Formatted as markdown without '```'
-  agent: reporting_analyst
+     A structured classification including:
+        - issue_type
+        - order_id (if any)
+        - sentiment
+  agent: triage_agent
+
+order_task:
+  description: >
+    If the issue is classified as 'Order Issue':
+
+        - Extract the order ID
+        - Use the Order Lookup Tool
+        - Provide a clear, friendly response explaining order status
+        - If delayed more than 3 days, apologize and offer reassurance
+  expected_output: >
+    A customer-friendly response explaining:
+        - Order status
+        - Tracking details
+        - Resolution or next steps
+  agent: order_agent
+
+refund_task:
+  description: >
+    If the issue is classified as 'Refund Issue':
+        - Extract order ID
+        - Check refund eligibility
+        - Use Refund Tool if eligible
+        - Explain refund decision clearly
+  expected_output: >
+    A clear decision including:
+        - Whether refund was approved or denied
+        - Explanation based on policy
+        - Next steps for customer
+  agent: refund_agent
+
+escalation_task:
+  description: >
+        If customer sentiment is Angry or issue is complex:
+        - Prepare escalation summary for human agent
+        - Include issue type
+        - Include order ID
+        - Include sentiment analysis
+        - Suggest recommended resolution
+  expected_output: >
+    A structured escalation summary for human support including:
+        - Issue Type
+        - Order ID
+        - Sentiment
+        - Summary
+        - Recommended Action
+  agent: escalation_agent

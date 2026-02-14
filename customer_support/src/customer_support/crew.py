@@ -20,16 +20,30 @@ class CustomerSupport():
     # If you would like to add tools to your agents, you can learn more about it here:
     # https://docs.crewai.com/concepts/agents#agent-tools
     @agent
-    def researcher(self) -> Agent:
+    def triage_agent(self) -> Agent:
         return Agent(
-            config=self.agents_config['researcher'], # type: ignore[index]
+            config=self.agents_config['triage_agent'], # type: ignore[index]
             verbose=True
         )
 
     @agent
-    def reporting_analyst(self) -> Agent:
+    def order_agent(self) -> Agent:
         return Agent(
-            config=self.agents_config['reporting_analyst'], # type: ignore[index]
+            config=self.agents_config['order_agent'], # type: ignore[index]
+            verbose=True
+        )
+
+    @agent
+    def refund_agent(self) -> Agent:
+        return Agent(
+            config=self.agents_config['refund_agent'], # type: ignore[index]
+            verbose=True
+        )
+
+    @agent
+    def escalation_agent(self) -> Agent:
+        return Agent(
+            config=self.agents_config['escalation_agent'], # type: ignore[index]
             verbose=True
         )
 
@@ -37,16 +51,27 @@ class CustomerSupport():
     # task dependencies, and task callbacks, check out the documentation:
     # https://docs.crewai.com/concepts/tasks#overview-of-a-task
     @task
-    def research_task(self) -> Task:
+    def triage_task(self) -> Task:
         return Task(
-            config=self.tasks_config['research_task'], # type: ignore[index]
+            config=self.tasks_config['triage_task'], # type: ignore[index]
         )
 
     @task
-    def reporting_task(self) -> Task:
+    def order_task(self) -> Task:
         return Task(
-            config=self.tasks_config['reporting_task'], # type: ignore[index]
-            output_file='report.md'
+            config=self.tasks_config['order_task'], # type: ignore[index]
+        )
+
+    @task
+    def refund_task(self) -> Task:
+        return Task(
+            config=self.tasks_config['refund_task'], # type: ignore[index]
+        )
+
+    @task
+    def escalation_task(self) -> Task:
+        return Task(
+            config=self.tasks_config['escalation_task'], # type: ignore[index]
         )
 
     @crew
@@ -58,7 +83,8 @@ class CustomerSupport():
         return Crew(
             agents=self.agents, # Automatically created by the @agent decorator
             tasks=self.tasks, # Automatically created by the @task decorator
-            process=Process.sequential,
+            process=Process.hierarchical,
+            manager_llm="gpt-5-nano",
             verbose=True,
             # process=Process.hierarchical, # In case you wanna use that instead https://docs.crewai.com/how-to/Hierarchical/
         )
