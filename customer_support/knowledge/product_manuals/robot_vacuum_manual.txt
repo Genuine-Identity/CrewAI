@@ -1,0 +1,48 @@
+PRODUCT MANUAL
+Model: CleanBot X200
+
+OVERVIEW
+Smart robotic vacuum with mapping technology.
+
+SPECIFICATIONS
+- Battery Life: 120 minutes
+- Dustbin: 600ml
+- App Control: Yes
+- WiFi Required: 2.4GHz
+
+INITIAL SETUP
+1. Charge for 4 hours.
+2. Download CleanBot app.
+3. Connect to WiFi.
+4. Start mapping mode.
+
+MAINTENANCE
+- Empty dustbin after each use.
+- Clean filter weekly.
+- Replace brush every 3 months.
+
+TROUBLESHOOTING
+
+Vacuum Not Charging:
+- Clean charging contacts.
+- Ensure dock is plugged in.
+
+Not Connecting to WiFi:
+- Use 2.4GHz network.
+- Reset device.
+- Restart router.
+
+Stops Mid-Clean:
+- Check for obstacles.
+- Clean wheels.
+- Ensure battery is charged.
+
+WARRANTY
+1-Year Limited Warranty.
+Excludes battery wear and tear.
+
+SUPPORT
+Contact support if:
+- Mapping fails repeatedly
+- Device emits unusual noise
+- Arrived damaged

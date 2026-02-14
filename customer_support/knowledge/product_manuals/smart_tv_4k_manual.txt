@@ -1,0 +1,45 @@
+PRODUCT MANUAL
+Model: VisionMax 55” 4K Smart TV
+
+OVERVIEW
+Ultra HD Smart TV with HDR and streaming integration.
+
+SPECIFICATIONS
+- Resolution: 3840 x 2160
+- HDMI Ports: 3
+- WiFi: Dual Band
+- OS: SmartOS 6
+
+SETUP
+1. Mount TV securely.
+2. Connect to power.
+3. Insert batteries into remote.
+4. Follow on-screen setup.
+
+TROUBLESHOOTING
+
+No Signal:
+- Check HDMI cable.
+- Select correct input source.
+- Restart TV.
+
+WiFi Not Connecting:
+- Restart router.
+- Re-enter password.
+- Reset network settings.
+
+Screen Lines:
+- Power cycle device.
+- Check cable connections.
+- Contact support if persistent.
+
+WARRANTY
+2-Year Manufacturer Warranty.
+Panel defects covered.
+Physical screen damage not covered.
+
+SUPPORT
+Report:
+- Cracked screen on arrival
+- Dead pixels
+- Remote malfunction

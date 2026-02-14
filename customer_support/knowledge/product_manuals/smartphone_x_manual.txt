@@ -1,0 +1,54 @@
+PRODUCT MANUAL
+Model: Smartphone X
+
+OVERVIEW
+Smartphone X is a 5G-enabled device with OLED display and AI-enhanced camera.
+
+SPECIFICATIONS
+- Display: 6.5” OLED
+- Storage: 256GB
+- Camera: 50MP + 12MP Dual Lens
+- Battery: 4500mAh
+- Charging: Fast Charge 65W
+
+INITIAL SETUP
+1. Insert SIM card.
+2. Power on device.
+3. Connect to WiFi.
+4. Sign in with Google or Apple ID.
+
+BATTERY CARE
+- Avoid overcharging overnight.
+- Use certified charging cables only.
+- Optimal battery range: 20%–80%.
+
+TROUBLESHOOTING
+
+Phone Not Charging:
+- Clean charging port.
+- Try different cable.
+- Restart phone.
+
+App Crashes:
+- Update app.
+- Clear app cache.
+- Reinstall application.
+
+Device Overheating:
+- Avoid direct sunlight.
+- Close background apps.
+- Update system software.
+
+FACTORY RESET
+Settings → System → Reset → Factory Data Reset
+
+WARRANTY
+1-Year Manufacturer Warranty.
+Battery covered for 6 months.
+Physical or water damage not covered.
+
+SUPPORT CONTACT
+If:
+- Screen flickers persistently
+- Phone shuts down randomly
+- Device arrived damaged

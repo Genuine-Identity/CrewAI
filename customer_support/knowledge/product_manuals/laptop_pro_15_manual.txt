@@ -1,0 +1,61 @@
+PRODUCT MANUAL
+Model: Laptop Pro 15
+Version: 2026 Edition
+
+OVERVIEW
+Laptop Pro 15 is a high-performance laptop designed for professionals,
+students, and creators. It features a 15.6-inch display, aluminum chassis,
+and long-lasting battery.
+
+SPECIFICATIONS
+- Display: 15.6” IPS Full HD
+- Processor: Intel i7 13th Gen
+- RAM: 16GB DDR5
+- Storage: 1TB SSD
+- Battery Life: Up to 10 hours
+- Operating System: Windows 11 Pro
+
+INITIAL SETUP
+1. Connect the power adapter.
+2. Press the power button for 3 seconds.
+3. Follow on-screen setup instructions.
+4. Connect to WiFi.
+5. Log in or create a user account.
+
+CHARGING
+- Use only the original charger.
+- Full charge takes approximately 2 hours.
+- Avoid draining battery to 0% regularly.
+
+TROUBLESHOOTING
+
+Device Not Powering On:
+- Ensure battery is charged.
+- Hold power button for 10 seconds to force reset.
+- Try different power outlet.
+
+Overheating:
+- Ensure ventilation ports are not blocked.
+- Avoid placing laptop on soft surfaces.
+- Update system drivers.
+
+Screen Flickering:
+- Update graphics drivers.
+- Restart device.
+- Check display cable (if external monitor).
+
+SAFETY INFORMATION
+- Do not expose to water.
+- Avoid extreme temperatures.
+- Do not open internal components.
+
+WARRANTY
+1-Year Limited Manufacturer Warranty.
+Covers hardware defects under normal usage.
+Does not cover accidental damage or liquid damage.
+
+SUPPORT CONTACT
+Contact support if:
+- Device fails to boot after reset.
+- Physical damage occurred during shipping.
+- Battery swelling is observed.
