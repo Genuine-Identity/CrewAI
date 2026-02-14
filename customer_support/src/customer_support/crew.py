@@ -2,6 +2,8 @@ from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from crewai.agents.agent_builder.base_agent import BaseAgent
 from typing import List
+from crewai.knowledge.source.text_file_knowledge_source import TextFileKnowledgeSource
+
 # If you want to run a snippet of code before or after the crew starts,
 # you can use the @before_kickoff and @after_kickoff decorators
 # https://docs.crewai.com/concepts/crews#example-crew-class-with-decorators
@@ -13,6 +15,13 @@ class CustomerSupport():
     agents: List[BaseAgent]
     tasks: List[Task]
 
+    policy_knowledge = TextFileKnowledgeSource(
+        file_paths=[
+            "policy/account_suspension_policy.txt", 
+            "policy/damaged_goods_policy.txt"
+        ]
+    )
+    
     # Learn more about YAML configuration files here:
     # Agents: https://docs.crewai.com/concepts/agents#yaml-configuration-recommended
     # Tasks: https://docs.crewai.com/concepts/tasks#yaml-configuration-recommended
@@ -39,13 +48,29 @@ class CustomerSupport():
             config=self.agents_config['refund_agent'], # type: ignore[index]
             verbose=True
         )
-
+    
+    @agent
+    def policy_agent(self) -> Agent:
+        return Agent(
+            config=self.agents_config['policy_agent'], # type: ignore[index]
+            verbose=True
+        )
+    
     @agent
     def escalation_agent(self) -> Agent:
         return Agent(
             config=self.agents_config['escalation_agent'], # type: ignore[index]
             verbose=True
         )
+    
+    @agent
+    def general_agent(self) -> Agent:
+        return Agent(
+            config=self.agents_config['general_agent'], # type: ignore[index]
+            knowledge_sources=[self.policy_knowledge],
+            verbose=True
+        )
+
 
     # To learn more about structured task outputs,
     # task dependencies, and task callbacks, check out the documentation:
@@ -72,6 +97,12 @@ class CustomerSupport():
     def escalation_task(self) -> Task:
         return Task(
             config=self.tasks_config['escalation_task'], # type: ignore[index]
+        )
+
+    @task
+    def general_task(self) -> Task:
+        return Task(
+            config=self.tasks_config['general_task'], # type: ignore[index]            
         )
 
     @crew

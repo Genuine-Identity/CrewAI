@@ -65,3 +65,64 @@ escalation_task:
         - Summary
         - Recommended Action
   agent: escalation_agent
+
+policy_task:
+  description: >
+    Review the drafted customer support response and verify compliance 
+    with the company’s ecommerce policies.
+
+    Inputs:
+    - Customer query
+    - Drafted support response
+    - Company policy document
+
+    Your responsibilities:
+    1. Check if refund/return/exchange decision follows policy rules.
+    2. Verify timelines (return window, refund processing days, etc.).
+    3. Confirm eligibility conditions are satisfied.
+    4. Detect policy violations or risky promises.
+    5. If compliant → Approve.
+    6. If non-compliant → Reject and provide corrected response.
+  expected_output: >
+    A structured compliance report:
+
+    - Policy Decision: (Approved / Rejected)
+    - Violations Found: (List if any)
+    - Risk Level: (Low / Medium / High)
+    - Corrected Response (if needed)
+    - Explanation referencing policy clauses
+  agent: policy_agent
+
+general_task:
+  description: >
+    Review the drafted response to a customer's general enquiry.
+
+    Inputs:
+    - Customer message
+    - Drafted support reply
+    - Company policy document
+    - Shipping SLA document (if relevant)
+    - Product catalog data (if relevant)
+
+    Your responsibilities:
+
+    1. Validate factual accuracy (pricing, availability, shipping times).
+    2. Ensure tone is professional and customer-friendly.
+    3. Confirm no policy violations exist.
+    4. Check that no guarantees beyond official policy are made.
+    5. Ensure no sensitive internal data is exposed.
+    6. If missing information is required → Recommend clarification.
+    7. Approve or reject the response.
+
+    If rejected, provide a corrected, compliant version.
+  expected_output: >
+    Structured Compliance Report:
+
+    - Decision: Approved / Rejected
+    - Accuracy Check: Pass / Fail
+    - Policy Compliance: Pass / Fail
+    - Risk Level: Low / Medium / High
+    - Issues Found: (bullet list)
+    - Corrected Response (if applicable)
+    - Explanation
+  agent: general_agent

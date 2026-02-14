@@ -18,7 +18,7 @@ def run():
     Run the crew.
     """
     inputs = {
-        'customer_message': 'My order 48392 has not updated in 5 days. I want a refund.',
+        'customer_message': 'can you please the price of dell mobile precision workstation laptop?',        # My order 48392 has not updated in 5 days. I want a refund.
     }
 
     try:
